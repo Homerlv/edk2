@@ -753,4 +753,5 @@
   # compiler from successfully building some of the OpenSSL source files that
   # use floating point types, so clear the flags here.
   #
-  GCC:*_*_AARCH64_CC_XIPFLAGS ==
+  XCODE:*_*_IA32_CC_FLAGS   = -mmmx -msse -U_WIN32 -U_WIN64 $(OPENSSL_FLAGS) $(OPENSSL_FLAGS_NOASM) -w -std=c99 -Wno-error=uninitialized -DOPENSSL_NO_APPLE_CRYPTO_RANDOM
+  XCODE:*_*_X64_CC_FLAGS    = -mmmx -msse -U_WIN32 -U_WIN64 $(OPENSSL_FLAGS) $(OPENSSL_FLAGS_NOASM) -w -std=c99 -Wno-error=uninitialized -DOPENSSL_NO_APPLE_CRYPTO_RANDOM

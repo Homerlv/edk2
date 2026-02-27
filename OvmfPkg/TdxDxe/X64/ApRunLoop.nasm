@@ -16,13 +16,13 @@
 
 DEFAULT REL
 
-SECTION .bss
+SECTION .text
+
+; Define stack space in the text section instead of bss to avoid text relocation issues
 global STACK_BASE
 STACK_BASE:
  resb 1024
 STACK_TOP:
-
-SECTION .text
 
 %define TDX_WORK_AREA_MAILBOX_GDTR   (FixedPcdGet32 (PcdOvmfWorkAreaBase) + 128)
 %define PT_ADDR(Offset)              (FixedPcdGet32 (PcdOvmfSecPageTablesBase) + (Offset))
@@ -125,7 +125,7 @@ AsmRelocateApResetVector:
 
 .prepareStack:
     ; The stack can then be used to switch from long mode to compatibility mode
-    mov rsp, STACK_TOP
+    lea rsp, [rel STACK_TOP]
 
 .loadGDT:
     cli
