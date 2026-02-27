@@ -22,8 +22,8 @@
 #  define HEADER_CRYPTO_H
 # endif
 
-# include <stdlib.h>
-# include <time.h>
+
+# include <openssl/e_os2.h>
 
 # include <openssl/e_os2.h>
 

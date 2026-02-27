@@ -96,7 +96,6 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #define NS_INADDRSZ   4   /*%< IPv4 T_A */
 #define NS_IN6ADDRSZ  16  /*%< IPv6 T_AAAA */
 
-//
 // Basic types mapping
 //
 typedef UINTN   size_t;

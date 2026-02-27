@@ -22,6 +22,45 @@ EFI_PEI_PPI_DESCRIPTOR  mMigrateTempRamPpi = {
 ///
 /// Pei service instance
 ///
+
+/**
+  Wrapper function for CopyMem to match EFI_PEI_COPY_MEM signature
+
+  @param  Destination      The pointer to the destination buffer of the memory copy.
+  @param  Source           The pointer to the source buffer of the memory copy.
+  @param  Length           The number of bytes to copy from Source to Destination.
+
+**/
+VOID
+EFIAPI
+PeiCoreCopyMem (
+  IN VOID                       *Destination,
+  IN VOID                       *Source,
+  IN UINTN                      Length
+  )
+{
+  CopyMem (Destination, Source, Length);
+}
+
+/**
+  Wrapper function for SetMem to match EFI_PEI_SET_MEM signature
+
+  @param  Buffer           The pointer to the buffer to fill.
+  @param  Size             The number of bytes in Buffer to fill.
+  @param  Value            The value to fill Buffer with.
+
+**/
+VOID
+EFIAPI
+PeiCoreSetMem (
+  IN VOID                       *Buffer,
+  IN UINTN                      Size,
+  IN UINT8                      Value
+  )
+{
+  SetMem (Buffer, Size, Value);
+}
+
 EFI_PEI_SERVICES  gPs = {
   {
     PEI_SERVICES_SIGNATURE,
@@ -48,8 +87,8 @@ EFI_PEI_SERVICES  gPs = {
   PeiInstallPeiMemory,
   PeiAllocatePages,
   PeiAllocatePool,
-  (EFI_PEI_COPY_MEM)CopyMem,
-  (EFI_PEI_SET_MEM)SetMem,
+  PeiCoreCopyMem,
+  PeiCoreSetMem,
 
   PeiReportStatusCode,
   PeiResetSystem,
