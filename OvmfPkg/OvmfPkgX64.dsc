@@ -771,6 +771,7 @@
 ################################################################################
 [Components]
   OvmfPkg/ResetVector/ResetVector.inf
+  Worker/HelloWorld/hello_world.inf
 
   #
   # SEC Phase modules
