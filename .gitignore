@@ -6,3 +6,13 @@ __pycache__/
 tags/
 .vscode/
 .venv/
+
+# Ignore external submodules (keep only homer11 repos)
+CryptoPkg/Library/OpensslLib/openssl/
+UnitTestFrameworkPkg/Library/CmockaLib/cmocka/
+MdeModulePkg/Universal/RegularExpressionDxe/oniguruma/
+MdeModulePkg/Library/BrotliCustomDecompressLib/brotli/
+BaseTools/Source/C/BrotliCompress/brotli/
+RedfishPkg/Library/JsonLib/jansson/
+UnitTestFrameworkPkg/Library/GoogleTestLib/googletest/
+CryptoPkg/Library/MbedTlsLib/mbedtls/

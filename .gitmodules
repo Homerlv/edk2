@@ -1,25 +1,31 @@
 [submodule "CryptoPkg/Library/OpensslLib/openssl"]
 	path = CryptoPkg/Library/OpensslLib/openssl
 	url = https://gitee.com/loswdarmy/openssl
+	ignore = all
 [submodule "UnitTestFrameworkPkg/Library/CmockaLib/cmocka"]
 	path = UnitTestFrameworkPkg/Library/CmockaLib/cmocka
 	url = https://gitee.com/wwdashuaige/edk2-cmocka
+	ignore = all
 [submodule "MdeModulePkg/Universal/RegularExpressionDxe/oniguruma"]
 	path = MdeModulePkg/Universal/RegularExpressionDxe/oniguruma
 	url = https://gitee.com/wwdashuaige/oniguruma
+	ignore = all
 [submodule "MdeModulePkg/Library/BrotliCustomDecompressLib/brotli"]
 	path = MdeModulePkg/Library/BrotliCustomDecompressLib/brotli
 	url = https://gitee.com/jonestseng/brotli
+	ignore = all
 [submodule "BaseTools/Source/C/BrotliCompress/brotli"]
 	path = BaseTools/Source/C/BrotliCompress/brotli
 	url = https://gitee.com/jonestseng/brotli
-	ignore = untracked
+	ignore = all
 [submodule "RedfishPkg/Library/JsonLib/jansson"]
 	path = RedfishPkg/Library/JsonLib/jansson
 	url = https://gitee.com/wwdashuaige/jansson
+	ignore = all
 [submodule "UnitTestFrameworkPkg/Library/GoogleTestLib/googletest"]
 	path = UnitTestFrameworkPkg/Library/GoogleTestLib/googletest
 	url = https://gitee.com/shtoutman/googletest
+	ignore = all
 [submodule "UnitTestFrameworkPkg/Library/SubhookLib/subhook"]
 	path = UnitTestFrameworkPkg/Library/SubhookLib/subhook
 	url = https://gitee.com/homer11/edk2-subhook
@@ -32,6 +38,7 @@
 [submodule "CryptoPkg/Library/MbedTlsLib/mbedtls"]
 	path = CryptoPkg/Library/MbedTlsLib/mbedtls
 	url = https://gitee.com/huangrunxi/mbedtls
+	ignore = all
 [submodule "SecurityPkg/DeviceSecurity/SpdmLib/libspdm"]
 	path = SecurityPkg/DeviceSecurity/SpdmLib/libspdm
 	url = https://gitee.com/homer11/libspdm
